@@ -18,7 +18,7 @@ RUN yum update -y && \
     tar -xf bwa-0.7.12.tar.bz2 && cd bwa-0.7.12 && make && cp bwa /usr/local/bin  && cd .. && \
     tar -xf bcftools-1.3.tar.bz2 && cd bcftools-1.3 && make && cp bcftools vcfutils.pl /usr/local/bin && cd .. && \
     tar -xf STAR_2.4.2a.tar.gz && cp STAR-STAR_2.4.2a/bin/Linux_x86_64/* /usr/local/bin && \
-    cd / && rm -rf /tmp/* && mkdir /scratch && mkdir /data && chmod +x /usr/local/bin/*
+    cd / && rm -rf /tmp/* && mkdir /scratch && mkdir /data && chmod +x /usr/local/bin/* && yum clean all
 
 VOLUME /scratch
 VOLUME /data
